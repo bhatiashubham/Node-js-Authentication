@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 //mongoose.connect('mongodb://0.0.0.0:27017/athentication');
-const DB = 'mongodb+srv://bhatiashubham685:lApwmXuOaZWBOo3q@cluster0.6myayrv.mongodb.net/nodejsauthentication'
+const DB = "mongodb+srv://bhatiashubham685:lApwmXuOaZWBOo3q@cluster0.6myayrv.mongodb.net/?retryWrites=true&w=majority"
+
+
 
  mongoose.connect(DB, {
 useNewUrlParser: true,
