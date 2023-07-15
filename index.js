@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 8000;
+
 var bodyParser = require('body-parser')
-let mongoose = require('./config/mongoose.js')
+let db = require('./config/mongoose.js')
 let cookieParser = require('cookie-parser');
 let session = require('express-session');
 const passport  = require('passport');
