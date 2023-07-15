@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/home.css">
+    
+</head>
+<body>
+    <%- include('header'); %>
+    <div id="home">
+        <h1>Hi <%=user.name%> this is home page</h1>
+    </div>
+    <%- include('chatbox'); %>
+    <script>
+        <% if(flash.success && flash.success.length > 0){%>
+
+        new Noty({
+            theme: 'relax',
+            text: '<%= flash.success%>',
+            type: 'success',
+            layout: 'topRight',
+            timeout: 1500
+        }).show()
+        <%}%>
+
+        <% if(flash.error && flash.error.length > 0){%>
+
+        new Noty({
+            theme: 'relax',
+            text: '<%= flash.error%>',
+            type: 'error',
+            layout: 'topRight',
+            timeout: 1500
+        }).show()
+
+        <%}%>
+     </script>
+    <script src="/JS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+    <script src="/JS/chat-engine.js"></script>
+
+    <% if(locals.user) { %>
+    <script>
+        new ChatEngine('user-chat-box', '<%= locals.user.email %>')
+    </script>
+<%}%>
+</body>
+</html>

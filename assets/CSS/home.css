@@ -1,0 +1,75 @@
+header{
+    height: 70px;
+    display: flex;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(71, 71, 110);
+    margin: -8px;
+    justify-content: center;
+    align-items: center;
+}
+header div{
+    margin: 0 400px 0 40px;
+}
+#content{
+    display: flex;
+    margin: 0;
+}
+#content p{
+    margin: 0 50px 0 0;
+}
+#dropdown{
+    height: 150px;
+    width: 250px;
+    border: 2px black solid;
+    margin: 0 0 0 1250px; 
+    box-shadow: 10px 10px 10px rgb(41, 39, 39);
+    opacity: 0; 
+    background-color: rgb(207, 207, 207);
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    background-image: url('../IMAGE/fabrizio-conti-kXVogATbFgA-unsplash.jpg');
+    background-position: center;
+    background-size: 100% 600%;
+    background-repeat: no-repeat;
+    
+}
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#user-chat-box{
+    border: 2px solid black;
+    width: 300px;
+    min-height: 300px;
+    margin: 0px 0 0 80%;
+    background-color: antiquewhite;
+    color: antiquewhite;
+    /* position: fixed; */
+}
+.other-message{
+    min-height: 10ox;
+    max-width: 150px;
+    background-color: brown;
+    margin: 10px 0 10px -30px;
+}
+.self-message{
+    min-height: 10ox;
+    max-width: 150px;
+    background-color: rgb(60, 30, 142);
+    margin: 10px 0 0 40%;
+}
+#user-chat-list{
+    width: 80%;
+    height: 270px;
+    border: 1px black dotted;
+    margin: 0 0 0 10px;
+    overflow:auto
+}

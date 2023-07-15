@@ -1,0 +1,42 @@
+ <html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/Style.css">
+</head>
+<body>
+    <section class="body1">
+        <div><h1>Signup</h1></div>
+
+        <div>
+            <form action="/user/create" method="post">
+            <label for="name" style="margin-left: -130px;font-weight: bolder;">name:</label>
+            <input type="text" name="name" placeholder="enter name" required>
+            <label for="email" style="margin-left: -130px;font-weight: bolder;">email:</label>
+            <input type="email" name="email" placeholder="enter email" required>
+            <label for="password" style="margin-left: -100px;font-weight: bolder;">password:</label>
+            <input type="password" name="password" placeholder="enter password" required>
+            <label for="password" style="margin-left: -40px;font-weight: bolder;">Confrom-password:</label>
+            <input type="password" name="confrom_password" placeholder="Re-enter password" required>
+            <input type="submit" value="Sign-up">
+        </form>
+        </div>
+        <div>
+            <a href="/user/auth/google">
+            <button href="/user/auth/google" class="google-button">
+            <span class="google-button__icon">
+              <img src="../IMAGE/Google__G__Logo.svg.png" height="20px" width="20px" style="margin: 5px 0 0 0;">
+            </span>
+            <span class="google-button__text">Sign in with Google</span>
+            </button>
+            </a>
+        </div>
+    </section>
+    <section id="body2" style="margin: -4px 0 0 0;">
+        <img src="https://cdn.storymirror.com/cover/original/vqo1gm6n.jpg" alt="">
+    </section>
+</body>
+</html>

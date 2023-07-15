@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title><%= title%></title> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="/CSS/Style.css">
+</head>
+<body>
+    <section class="body1">
+        <div><h1>Signin</h1></div>
+        
+        <div>
+            <form action="/user/createsession" method="post">
+                <label for="email" style="margin-left: -130px;font-weight: bolder;">email:</label>
+                <input type="email" name="email" id="" placeholder="enter email.." required>
+                <label for="password" style="margin-left: -100px;font-weight: bolder;">password:</label>
+                <input type="password" name="password" id="" placeholder="enter password.." required>
+                <input type="submit" value="Log-in">
+            </form>
+        </div>
+        <div class="hrhr"><hr>or <hr></div>
+        <div><a href="/user/forgetpassword">Forget Password</a></div>
+        <div>
+            <a href="/user/auth/google">
+            <button href="/user/auth/google" class="google-button">
+            <span class="google-button__icon">
+              <img src="../IMAGE/Google__G__Logo.svg.png" height="20px" width="20px" style="margin: 5px 0 0 0;">
+            </span>
+            <span class="google-button__text">Sign in with Google</span>
+            </button>
+            </a>
+        </div>
+        <div><p>don't have any acount <a href="/user/signup">Click here</a></p></div>
+    </section>
+    <section id="body2">
+        <img src="https://cdn.storymirror.com/cover/original/vqo1gm6n.jpg" alt="">
+    </section>
+    <script>
+        <% if(flash.success && flash.success.length > 0){%>
+
+        new Noty({
+            theme: 'relax',
+            text: '<%= flash.success%>',
+            type: 'success',
+            layout: 'topRight',
+            timeout: 1500
+        }).show()
+        <%}%>
+
+        <% if(flash.error && flash.error.length > 0){%>
+
+        new Noty({
+            theme: 'relax',
+            text: '<%= flash.error%>',
+            type: 'error',
+            layout: 'topRight',
+            timeout: 1500
+        }).show()
+
+        <%}%>
+     </script
+</body>
+</html>
