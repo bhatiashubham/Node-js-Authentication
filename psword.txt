@@ -1,0 +1,3 @@
+mongodb+srv://bhatiashubham685:<password>@cluster0.6myayrv.mongodb.net/
+
+lApwmXuOaZWBOo3q
